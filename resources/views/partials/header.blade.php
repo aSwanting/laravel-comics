@@ -1,14 +1,18 @@
 <header>
     <div class="header-top">
         <div class="container">
-            <ul class="top-nav">
-                <li>
-                    <a href="#">DC Power&#8480; Visa&reg;</a>
-                </li>
-                <li>
-                    <a href="#">Additional DC Sites&blacktriangledown;</a>
-                </li>
-            </ul>
+            <div class="row">
+                <div class="col">
+                    <ul class="top-nav">
+                        <li>
+                            <a href="#">DC Power&#8480; Visa&reg;</a>
+                        </li>
+                        <li>
+                            <a href="#">Additional DC Sites&blacktriangledown;</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
     <nav class="header-nav">
