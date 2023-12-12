@@ -10,7 +10,7 @@
                 <h1 class="gallery-title">Current Series</h1>
                 <div class="grid-wrapper">
                     @foreach ($comics as $comic)
-                        <a href="{{ URL::route('details', ['id' => $loop->index]) }}">
+                        <a href="{{ URL::route('details', ['id' => $loop->index, 'total' => $loop->count]) }}">
                             <div class="grid-item">
                                 <div class="item-img">
                                     <img class="comic-thumb" src="{{ $comic['thumb'] }}" alt="">

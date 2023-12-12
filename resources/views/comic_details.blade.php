@@ -1,5 +1,6 @@
 @php
     $id = request('id');
+    $count = request('total');
     $title = $comics[$id]['title'];
     $description = $comics[$id]['description'];
     $thumb = $comics[$id]['thumb'];
@@ -41,6 +42,21 @@
                 </div>
             </div>
         </div>
+        <div class="comic-nav text-center mb-3">
+            @if ($id > 0)
+                <a class="link-primary px-3" href="{{ URL::route('details', ['id' => $id - 1, 'total' => $count]) }}">
+                    Previous Comic
+                </a>
+            @endif
+
+            @if ($id < $count - 1)
+                <a class="link-primary px-3" href="{{ URL::route('details', ['id' => $id + 1, 'total' => $count]) }}">
+                    Next Comic
+                </a>
+            @endif
+
+        </div>
+
         <div class="specs">
             <div class="container">
                 <div class="row gap-5">
