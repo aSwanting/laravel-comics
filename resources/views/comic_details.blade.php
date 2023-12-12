@@ -43,6 +43,7 @@
             </div>
         </div>
         <div class="comic-nav text-center mb-3">
+
             @if ($id > 0)
                 <a class="link-primary px-3" href="{{ URL::route('details', ['id' => $id - 1, 'total' => $count]) }}">
                     Previous Comic

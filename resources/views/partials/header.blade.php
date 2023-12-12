@@ -27,16 +27,52 @@
 
                 <div class="col">
                     <ul class="nav-menu">
-                        <li class="nav-item"><a href="#">Characters</a></li>
-                        <li class="nav-item"><a class="active" href="{{ URL::route('comics') }}">Comics</a></li>
-                        <li class="nav-item"><a href="#">Movies</a></li>
+
+                        @php
+                            $nav_items = [
+                                'characters' => 'Characters',
+                                'comics' => 'Comics',
+                                'movies' => 'Movies',
+                                'tv' => 'TV',
+                                'games' => 'Games',
+                                'collectibles' => 'Collectibles',
+                                'videos' => 'Videos',
+                                'fans' => 'Fans',
+                                'news' => 'News',
+                                'shop' => 'Shop',
+                            ];
+                        @endphp
+
+                        @foreach ($nav_items as $key => $value)
+                            <li class="nav-item">
+                                <a @class(['active' => Route::currentRouteName() == $key]) href="{{ URL::route($key) }}">
+                                    {!! $key == 'shop' ? $value . ' <span>&blacktriangledown;</span>' : $value !!}
+                                </a>
+                            </li>
+                        @endforeach
+
+
+                        {{-- <li class="nav-item"><a href="#">Characters</a></li>
+
+                        <li class="nav-item">
+                            <a @class(['active' => Route::currentRouteName() == 'comics']) 
+                                href="{{ URL::route('comics') }}">Comics
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a @class(['active' => Route::currentRouteName() == 'movies']) 
+                                href="{{ URL::route('movies') }}">Movies
+                            </a>
+                        </li>
+
                         <li class="nav-item"><a href="#">TV</a></li>
                         <li class="nav-item"><a href="#">Games</a></li>
                         <li class="nav-item"><a href="#">Collectibles</a></li>
                         <li class="nav-item"><a href="#">Videos</a></li>
                         <li class="nav-item"><a href="#">Fans</a></li>
                         <li class="nav-item"><a href="#">News</a></li>
-                        <li class="nav-item"><a href="#">Shop <span>&blacktriangledown;</span></a></li>
+                        <li class="nav-item"><a href="#">Shop <span>&blacktriangledown;</span></a></li> --}}
                     </ul>
                 </div>
 
