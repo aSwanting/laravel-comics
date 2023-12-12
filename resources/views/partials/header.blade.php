@@ -28,7 +28,7 @@
                 <div class="col">
                     <ul class="nav-menu">
                         <li class="nav-item"><a href="#">Characters</a></li>
-                        <li class="nav-item"><a href="#">Comics</a></li>
+                        <li class="nav-item"><a class="active" href="#">Comics</a></li>
                         <li class="nav-item"><a href="#">Movies</a></li>
                         <li class="nav-item"><a href="#">TV</a></li>
                         <li class="nav-item"><a href="#">Games</a></li>
