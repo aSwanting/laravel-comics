@@ -51,28 +51,6 @@
                             </li>
                         @endforeach
 
-
-                        {{-- <li class="nav-item"><a href="#">Characters</a></li>
-
-                        <li class="nav-item">
-                            <a @class(['active' => Route::currentRouteName() == 'comics']) 
-                                href="{{ URL::route('comics') }}">Comics
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a @class(['active' => Route::currentRouteName() == 'movies']) 
-                                href="{{ URL::route('movies') }}">Movies
-                            </a>
-                        </li>
-
-                        <li class="nav-item"><a href="#">TV</a></li>
-                        <li class="nav-item"><a href="#">Games</a></li>
-                        <li class="nav-item"><a href="#">Collectibles</a></li>
-                        <li class="nav-item"><a href="#">Videos</a></li>
-                        <li class="nav-item"><a href="#">Fans</a></li>
-                        <li class="nav-item"><a href="#">News</a></li>
-                        <li class="nav-item"><a href="#">Shop <span>&blacktriangledown;</span></a></li> --}}
                     </ul>
                 </div>
 

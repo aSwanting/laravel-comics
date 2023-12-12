@@ -52,6 +52,9 @@ header {
                 &:hover,
                 &.active {
                     color: $azure-radiance;
+                }
+                &.active {
+                    color: $azure-radiance;
                     &::after {
                         display: block;
                     }
