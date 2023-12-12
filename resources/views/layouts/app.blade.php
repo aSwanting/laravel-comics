@@ -14,6 +14,7 @@
 
 <body>
     @include('partials.header')
+    @include('partials.hero')
     <main>
         @yield('main')
     </main>

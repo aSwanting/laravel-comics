@@ -2,8 +2,9 @@ header {
     font-family: "Roboto Condensed", sans-serif;
 
     .header-top {
-        font-size: 12px;
-        background-color: rgb(0, 119, 255);
+        font-size: 10px;
+        line-height: 20px;
+        background-color: $azure-radiance;
         color: white;
         text-transform: uppercase;
         .top-nav {
@@ -13,8 +14,8 @@ header {
         }
     }
     .header-nav {
-        background-color: rgb(250, 250, 250);
-        color: rgb(61, 61, 61);
+        background-color: #fff;
+        color: $mine-shaft;
         font-size: 14px;
         font-weight: 700;
 
@@ -29,7 +30,7 @@ header {
 
             .nav-item span {
                 display: inline-block;
-                color: rgb(0, 119, 255);
+                color: $azure-radiance;
                 transform: scale(1.5);
             }
 
@@ -46,10 +47,10 @@ header {
                     display: none;
                     position: absolute;
                     inset: 96% 0 0 0;
-                    background-color: rgb(0, 119, 255);
+                    background-color: $azure-radiance;
                 }
                 &:hover {
-                    color: rgb(0, 119, 255);
+                    color: $azure-radiance;
                     &::after {
                         display: block;
                     }
@@ -58,7 +59,7 @@ header {
         }
 
         .nav-search {
-            border-bottom: 2px solid rgb(0, 119, 255);
+            border-bottom: 2px solid $azure-radiance;
             input {
                 width: 100px;
                 border: none;

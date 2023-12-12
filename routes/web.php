@@ -14,5 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
-})->name('index');
+
+    @require_once __DIR__ . "/../resources/php/comics.php";
+
+    return view('comics', compact('comics'));
+})->name('comics');

@@ -1,3 +1,6 @@
 @import "~bootstrap/scss/bootstrap";
-@import "partials/reset";
-@import "partials/header";
+@import "./partials/variables";
+@import "./partials/reset";
+@import "./partials/header";
+@import "./partials/hero";
+@import "./partials/comics";
