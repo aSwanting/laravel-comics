@@ -38,10 +38,11 @@
         }
         .availability {
             text-align: center;
+            white-space: nowrap;
         }
         .price-info,
         .availability {
-            border: 1px solid rgba(109, 109, 109, 0.404);
+            border: 1px solid rgba(109, 109, 109, 0.25);
             padding: 16px;
         }
     }
@@ -82,8 +83,8 @@
             a {
                 display: block;
                 border-left: 1px solid rgba(128, 128, 128, 0.2);
-                padding: 40px 0;
-                line-height: 20px;
+                padding: 0 40px;
+                line-height: 60px;
                 text-align: center;
 
                 &:hover {

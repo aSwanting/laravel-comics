@@ -26,11 +26,11 @@
                     <h1 class="comic-title">{{ $title }}</h1>
                     <div class="comic-availability">
                         <div class="row align-items-center m-0">
-                            <div class="col-9 price-info ">
-                                <span>U.S. Price: {{ $price }}</span>
-                                <span>Available</span>
+                            <div class="col flex-grow-1 price-info ">
+                                <span><span class="opacity-75">U.S. Price: </span> {{ $price }}</span>
+                                <span class="opacity-75">Available</span>
                             </div>
-                            <div class="col availability">Check Availability &blacktriangledown;</div>
+                            <div class="col-auto availability">Check Availability &blacktriangledown;</div>
                         </div>
                     </div>
                     <p class="comic-description">{{ $description }}</p>
