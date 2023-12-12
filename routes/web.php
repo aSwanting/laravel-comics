@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,8 +15,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-
-    @require_once __DIR__ . "/../resources/php/comics.php";
-
+    @require __DIR__ . "/../resources/php/comics.php";
     return view('comics', compact('comics'));
 })->name('comics');
+
+
+Route::get('/details', function () {
+    @require __DIR__ . "/../resources/php/comics.php";
+    return view('comic_details', compact('comics'));
+})->name('details');

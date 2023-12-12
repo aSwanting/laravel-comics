@@ -1,57 +1,119 @@
+@php
+    $id = request('id');
+    $title = $comics[$id]['title'];
+    $description = $comics[$id]['description'];
+    $thumb = $comics[$id]['thumb'];
+    $price = $comics[$id]['price'];
+    $series = $comics[$id]['series'];
+    $sale_date = date_format(date_create($comics[$id]['sale_date']), 'M d Y');
+    $type = $comics[$id]['type'];
+@endphp
+
 @extends('layouts.app')
 
-@section('title', 'Laravel Comics')
+@section('title', $title)
 
 @section('main')
-    <section class="comics">
-
-        <div class="comic-gallery">
-            <div class="container">
-                <h1 class="gallery-title">Current Series</h1>
-                <div class="grid-wrapper">
-                    @foreach ($comics as $comic)
-                        <div class="grid-item">
-                            <div class="item-img">
-                                <img class="comic-thumb" src="{{ $comic['thumb'] }}" alt="">
-                            </div>
-                            <div class="item-title">
-                                <p>{{ $comic['title'] }}</p>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-                <button class="load-more-btn">Load More</button>
+    <section class="comic-details">
+        <div class="comic-thumb">
+            <div class="container thumb-wrapper">
+                <img src="{{ $thumb }}" alt="">
             </div>
         </div>
-
-        <div class="comics-nav">
+        <div class="container">
+            <div class="row align-items-center gap-5">
+                <div class="col comic-info">
+                    <h1 class="comic-title">{{ $title }}</h1>
+                    <div class="comic-availability">
+                        <div class="row align-items-center m-0">
+                            <div class="col-9 price-info ">
+                                <span>U.S. Price: {{ $price }}</span>
+                                <span>Available</span>
+                            </div>
+                            <div class="col availability">Check Availability &blacktriangledown;</div>
+                        </div>
+                    </div>
+                    <p class="comic-description">{{ $description }}</p>
+                </div>
+                <div class="col-auto">
+                    <h4>Advertisement</h4>
+                    <img src="{{ Vite::asset('resources/img/adv.jpg') }}">
+                </div>
+            </div>
+        </div>
+        <div class="specs">
+            <div class="container">
+                <div class="row gap-5">
+                    <div class="col">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <td colspan="2">
+                                        <h3>Talent</h3>
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Art by:</td>
+                                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, fugit. </td>
+                                </tr>
+                                <tr>
+                                    <td>Written by:</td>
+                                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, fugit. </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <td colspan="2">
+                                        <h3>Specs</h3>
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Series:</td>
+                                    <td><a class="series-link" href="#">{{ $series }}</a> </td>
+                                </tr>
+                                <tr>
+                                    <td>U.S Price:</td>
+                                    <td>{{ $price }} </td>
+                                </tr>
+                                <tr>
+                                    <td>On Sale Date:</td>
+                                    <td>{{ $sale_date }} </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="details-nav">
             <div class="container">
                 <ul>
                     <li>
                         <a href="#">
-                            <img src="{{ Vite::asset('resources/img/buy-comics-digital-comics.png') }}" alt="">
                             Digital Comics
                         </a>
                     </li>
                     <li>
-                        <a href="#"><img src="{{ Vite::asset('resources/img/buy-comics-merchandise.png') }}"
-                                alt="">DC Merchandise
+                        <a href="#">
+                            Shop DC
                         </a>
                     </li>
                     <li>
-                        <a href="#"><img src="{{ Vite::asset('resources/img/buy-comics-subscriptions.png') }}"
-                                alt="">Subscription
+                        <a href="#">
+                            Comic Shop Location
                         </a>
                     </li>
                     <li>
-                        <a href="#"><img src="{{ Vite::asset('resources/img/buy-comics-shop-locator.png') }}"
-                                alt="">Comic Shop Locator
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="{{ Vite::asset('resources/img/buy-dc-power-visa.svg') }}"
-                                alt="">DC
-                            Power Visa
+                        <a href="#">
+                            Subscription
                         </a>
                     </li>
                 </ul>

@@ -10,14 +10,16 @@
                 <h1 class="gallery-title">Current Series</h1>
                 <div class="grid-wrapper">
                     @foreach ($comics as $comic)
-                        <div class="grid-item">
-                            <div class="item-img">
-                                <img class="comic-thumb" src="{{ $comic['thumb'] }}" alt="">
+                        <a href="{{ URL::route('details', ['id' => $loop->index]) }}">
+                            <div class="grid-item">
+                                <div class="item-img">
+                                    <img class="comic-thumb" src="{{ $comic['thumb'] }}" alt="">
+                                </div>
+                                <div class="item-title">
+                                    <p>{{ $comic['title'] }}</p>
+                                </div>
                             </div>
-                            <div class="item-title">
-                                <p>{{ $comic['title'] }}</p>
-                            </div>
-                        </div>
+                        </a>
                     @endforeach
                 </div>
                 <button class="load-more-btn">Load More</button>

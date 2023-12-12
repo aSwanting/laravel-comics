@@ -1,0 +1,99 @@
+.comic-details {
+    font-family: "Roboto Condensed", sans-serif;
+
+    .container-sm {
+        max-width: 1000px;
+    }
+    h1 {
+        text-transform: uppercase;
+        margin-bottom: 16px;
+    }
+    .comic-thumb {
+        background-color: $azure-radiance;
+        height: 60px;
+
+        .thumb-wrapper {
+            position: relative;
+
+            img {
+                position: absolute;
+                bottom: -35px;
+                left: 0;
+                width: 150px;
+            }
+        }
+    }
+
+    .comic-info {
+        padding: 50px 0;
+    }
+    .comic-availability {
+        background-color: #55ba59;
+        color: white;
+        margin-bottom: 20px;
+        .price-info {
+            display: flex;
+            justify-content: space-between;
+            padding: 16px;
+        }
+        .availability {
+            text-align: center;
+        }
+        .price-info,
+        .availability {
+            border: 1px solid rgba(109, 109, 109, 0.404);
+            padding: 16px;
+        }
+    }
+    .specs {
+        background-color: $wild-sand;
+        padding: 40px 0;
+
+        .series-link {
+            text-transform: uppercase;
+            color: $azure-radiance;
+        }
+
+        table * {
+            background-color: transparent;
+            h3 {
+                font-size: 20px;
+                font-weight: 700;
+            }
+            font-size: 14px;
+        }
+    }
+
+    .details-nav {
+        background-color: $wild-sand;
+        color: rgb(116, 116, 116);
+        text-transform: uppercase;
+        font-size: 12px;
+        border: 1px solid rgba(128, 128, 128, 0.2);
+
+        ul {
+            display: flex;
+            align-items: center;
+
+            li {
+                flex-basis: calc(100% / 4);
+            }
+
+            a {
+                display: block;
+                border-left: 1px solid rgba(128, 128, 128, 0.2);
+                padding: 40px 0;
+                line-height: 20px;
+                text-align: center;
+
+                &:hover {
+                    background-color: rgb(235, 235, 235);
+                }
+            }
+
+            &:last-child {
+                border-right: 1px solid rgba(128, 128, 128, 0.2);
+            }
+        }
+    }
+}
