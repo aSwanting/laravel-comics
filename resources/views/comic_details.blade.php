@@ -1,6 +1,6 @@
 @php
-    $id = request('id');
-    $count = request('total');
+    $id = $id;
+    $count = $total;
     $title = $comics[$id]['title'];
     $description = $comics[$id]['description'];
     $thumb = $comics[$id]['thumb'];

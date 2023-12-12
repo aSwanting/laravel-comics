@@ -23,9 +23,9 @@ Route::get('/', function () {
     return view('comics', compact('comics'));
 })->name('comics');
 
-Route::get('/details', function () {
+Route::get('/details/{id}/{total}', function (string $id, string $total) {
     @require __DIR__ . "/../resources/php/comics.php";
-    return view('comic_details', compact('comics'));
+    return view('comic_details', compact('comics', 'id', 'total'));
 })->name('details');
 
 Route::get('/movies', function () {
