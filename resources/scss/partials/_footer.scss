@@ -1,4 +1,4 @@
-footer {
+.footer-main {
     font-family: "Roboto Condensed", sans-serif;
     overflow: hidden;
     background-color: $azure-radiance;
@@ -32,6 +32,35 @@ footer {
     .legal-mumbojumbo {
         a {
             color: $azure-radiance;
+        }
+    }
+}
+.footer-social {
+    padding: 10px;
+    background-color: $mine-shaft;
+    text-transform: uppercase;
+    font-size: 14px;
+    .sign-up-btn {
+        text-transform: inherit;
+        background-color: transparent;
+        border: 2px solid $azure-radiance;
+        color: white;
+        padding: 0 20px;
+        line-height: 40px;
+    }
+    .socials {
+        h5 {
+            margin-right: 10px;
+            font-size: 14px;
+        }
+        color: $azure-radiance;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 10px;
+
+        img {
+            width: 26px;
         }
     }
 }
